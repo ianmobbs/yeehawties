@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 10px;
 }
 
 .content {
@@ -23,27 +24,29 @@ body {
     border: 2px solid #5c3d28;
     text-align: left;
     color: #5c3d28;
-    width: 28%;
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
 }
 
 h1 {
-    margin-top: 0;
     font-family: 'Assox', sans-serif;
-    font-size: 4em;
+    font-size: 2em;
     text-align: center;
+    margin: 0;
 }
 
 .tour {
-    margin-top: -5px;
-    font-size: 14px;
+    font-size: 1em;
     color: #5c3d28;
     text-align: center;
+    margin-top: 0;
 }
 
 hr {
     border: none;
     border-top: 1px solid #5c3d28;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .event {
@@ -52,12 +55,8 @@ hr {
     margin-bottom: 10px;
 }
 
-.location {
-    text-align: left;
-}
-
-.date {
-    text-align: right;
+.location, .date {
+    font-size: 1em;
 }
 
 .link {
@@ -67,4 +66,24 @@ hr {
 
 .link:hover {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .tour, .location, .date {
+        font-size: 0.9em;
+    }
+
+    .event {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .date {
+        margin-top: 5px;
+    }
 }
