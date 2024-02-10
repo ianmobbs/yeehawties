@@ -31,7 +31,7 @@ body {
 
 h1 {
     font-family: 'Assox', sans-serif;
-    font-size: 2em;
+    font-size: 4em;
     text-align: center;
     margin: 0;
 }
@@ -70,7 +70,8 @@ hr {
 
 @media only screen and (max-width: 600px) {
     h1 {
-        font-size: 1.5em;
+        font-size: 3em; /* Adjusted font size for mobile */
+        margin: 0 10px; /* Added margin to ensure text does not touch the edges */
     }
 
     .tour, .location, .date {
