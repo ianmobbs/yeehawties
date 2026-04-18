@@ -32,7 +32,6 @@ body {
     max-width: 500px;
     box-sizing: border-box;
     box-shadow: 10px 10px 0 0 #ff4d8f;
-    transform: rotate(-1deg);
 }
 
 h1 {
@@ -105,10 +104,9 @@ h1 {
 }
 
 .events td:first-child {
-    text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
-    font-size: 0.85em;
+    font-size: 0.9em;
 }
 
 .events td:nth-child(2) {
@@ -129,6 +127,65 @@ a.date {
 a.date:hover {
     text-decoration: none;
     transform: rotate(-4deg) scale(1.08);
+}
+
+.signup {
+    margin-top: 4px;
+}
+
+.signup-row {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.signup input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #5c3d28;
+    background-color: #fff6f2;
+    border: 2px solid #5c3d28;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    border-radius: 0;
+    outline: none;
+    transition: box-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.signup input[type="email"]::placeholder {
+    color: #5c3d2899;
+}
+
+.signup input[type="email"]:focus {
+    box-shadow: 4px 4px 0 0 #ff4d8f;
+    transform: translate(-2px, -2px);
+}
+
+.signup button {
+    font-family: 'Assox', sans-serif;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    color: #5c3d28;
+    background-color: #ffd166;
+    border: 2px solid #5c3d28;
+    padding: 0 16px;
+    box-shadow: 4px 4px 0 0 #ff4d8f;
+    cursor: pointer;
+    border-radius: 0;
+    white-space: nowrap;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.signup button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 #ff4d8f;
+}
+
+.signup button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 0 #ff4d8f;
 }
 
 @media only screen and (max-width: 600px) {
@@ -152,5 +209,14 @@ a.date:hover {
     .events th,
     .events td {
         padding: 8px 6px;
+    }
+
+    .signup-row {
+        flex-direction: column;
+    }
+
+    .signup button {
+        padding: 10px 16px;
+        align-self: flex-start;
     }
 }
