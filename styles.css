@@ -49,22 +49,37 @@ hr {
     margin: 20px 0;
 }
 
-.event {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.location, .date {
+.events {
+    width: 100%;
+    border-collapse: collapse;
     font-size: 1em;
+    color: #5c3d28;
 }
 
-.link {
+.events th,
+.events td {
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 1px solid #5c3d28;
+}
+
+.events th {
+    font-weight: 600;
+}
+
+.events tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.date {
     color: #ff4d8f;
+}
+
+a.date {
     text-decoration: underline;
 }
 
-.link:hover {
+a.date:hover {
     text-decoration: none;
 }
 
@@ -74,17 +89,12 @@ hr {
         margin: 0 10px; /* Added margin to ensure text does not touch the edges */
     }
 
-    .tour, .location, .date {
+    .tour, .events {
         font-size: 0.9em;
     }
 
-    .event {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .date {
-        margin-top: 5px;
+    .events th,
+    .events td {
+        padding: 6px 4px;
     }
 }
